@@ -1,0 +1,37 @@
+body {
+	background: #FAFAFA;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 16px;
+}
+ 
+header 
+{
+    background-color: #eeeeee;
+    padding: 1%;
+    margin: 1%;
+}
+
+ 
+/* - Tareas - */
+.tareas .lista
+{
+	list-style: none;
+}
+ 
+.tareas .lista li 
+{
+	border-bottom: 1px solid #B6B6B6;
+}
+ 
+.tareas .lista li a
+{
+	color: #212121;
+	display: block;
+	padding: 20px 0;
+	text-decoration: none;
+}
+ 
+.tareas .lista li a:hover
+{
+	text-decoration: line-through;
+}
