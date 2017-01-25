@@ -1,30 +1,40 @@
 (function(){
 	// Variables
-	var lista = document.getElementById("lista"),
-		tareaInput = document.getElementById("tareaInput"),
-		btnNuevaTarea = document.getElementById("btn-agregar");
+	var lista = document.getElementById("lista");
+	var	tareaInput = document.getElementById("tareaInput");
+	var	btnNuevaTarea = document.getElementById("btn-agregar");
  
 	// Funciones
 	var agregarTarea = function(){
-		var tarea = tareaInput.value,
-			nuevaTarea = document.createElement("li"),
-			enlace = document.createElement("a"),
-			contenido = document.createTextNode(tarea);
- 
+		var tarea = tareaInput.value;
+		var	nuevaTarea = document.createElement("li");
+		var	enlace = document.createElement("a");
+		var	contenido = document.createTextNode(tarea);
+        var checkbox = document.createElement("input");  
+        var icono = document.createElement("span");
+        
 		if (tarea === "") {
 			tareaInput.setAttribute("placeholder", "Agrega una tarea valida");
 			tareaInput.className = "error";
 			return false;
 		}
- 
-		// Agregamos el contenido al enlace
+       
+        checkbox.type = "checkbox";
+        // Agregamos el contenido al enlace
+        enlace.appendChild(checkbox);
+        // Agregamos el contenido al enlace
 		enlace.appendChild(contenido);
 		// Le establecemos un atributo href
 		enlace.setAttribute("href", "#");
-		// Agrergamos el enlace (a) a la nueva tarea (li)
+		// Agrergamos el enlace (a) a la nueva tarea (li) 
 		nuevaTarea.appendChild(enlace);
+        
+         icono.className = "glyphicon  glyphicon-trash , icon , pull-right";
+        enlace.appendChild(icono)
 		// Agregamos la nueva tarea a la lista
 		lista.appendChild(nuevaTarea);
+        
+       
  
 		tareaInput.value = "";
  
@@ -44,8 +54,6 @@
 		this.parentNode.removeChild(this);
 	};
  
-	// Eventos
- 
 	// Agregar Tarea
 	btnNuevaTarea.addEventListener("click", agregarTarea);
  
@@ -56,6 +64,19 @@
 	for (var i = 0; i <= lista.children.length -1; i++) {
 		lista.children[i].addEventListener("click", eliminarTarea);
 	}
+    
+    
+   /* var eliminar = document.getElementsByClassName("icon");
+for (var c = 0; c < eliminar.length; c++) {
+  eliminar[c].onclick = function(){
+    var lista = this.parentElement;
+    lista.style.display = "none";
+  }  
+}
+    checkbox.addEventListener("click", tachar);*/
+    
+    
+    
 }());
 
 
