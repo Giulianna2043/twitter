@@ -11,27 +11,39 @@ header
     margin: 1%;
 }
 
- 
 /* - Tareas - */
 .seccion-tareas .lista
 {
 	list-style: none;
 }
  
-.seccion-tareas  .lista li 
+.seccion-tareas .lista li 
 {
 	border-bottom: 1px solid #B6B6B6;
+    margin: 1%;
+    background-color: #eeeeee;
 }
- 
-.seccion-tareas  .lista li a
+
+.seccion-tareas .lista li a
 {
 	color: #212121;
 	display: block;
-	padding: 20px 0;
-	text-decoration: none;
+	padding: 1% 0;
+    text-decoration: none;
 }
  
+
 .seccion-tareas  .lista li a:hover
 {
 	text-decoration: line-through;
+}
+
+/*----- @media -----------*/
+@media screen and (max-width:768px) and (min-width:350px)
+{
+	.col-lg-12 textarea
+	{
+		width: 100%;
+	}
+	
 }
