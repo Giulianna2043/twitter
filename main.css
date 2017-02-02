@@ -13,17 +13,17 @@ header
 
  
 /* - Tareas - */
-.tareas .lista
+.seccion-tareas .lista
 {
 	list-style: none;
 }
  
-.tareas .lista li 
+.seccion-tareas  .lista li 
 {
 	border-bottom: 1px solid #B6B6B6;
 }
  
-.tareas .lista li a
+.seccion-tareas  .lista li a
 {
 	color: #212121;
 	display: block;
@@ -31,7 +31,7 @@ header
 	text-decoration: none;
 }
  
-.tareas .lista li a:hover
+.seccion-tareas  .lista li a:hover
 {
 	text-decoration: line-through;
 }
