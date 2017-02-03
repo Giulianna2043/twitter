@@ -15,14 +15,15 @@ header
 .seccion-tareas .lista
 {
 	list-style: none;
-} 
+}
+ 
 .seccion-tareas .lista li 
 {
 	border-bottom: 1px solid #B6B6B6;
     margin: 1%;
     background-color: #eeeeee;
 }
- 
+
 .seccion-tareas .lista li a
 {
 	color: #212121;
@@ -31,7 +32,8 @@ header
     text-decoration: none;
 }
  
-.seccion-tareas .lista li a:hover
+
+.seccion-tareas  .lista li a:hover
 {
 	text-decoration: line-through;
 }
