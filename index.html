@@ -11,11 +11,11 @@
 </head>
 <body>
     <header class="text-center"> <b>TODO APP</b> </header>
-        <div class="col-lg-12 col-md-8 col-xs-12">
-            <textarea cols =165 rows=5 name="Texto"  type="text" id="tareaInput" placeholder="Añade tu nueva tarea"></textarea> 
+        <div class="col-lg-8 col-md-8 col-xs-12">
+            <textarea cols =165 rows=5 name="Texto"  type="text" id="tareaInput" placeholder="Añade tu nueva tarea"></textarea>
                 <form class="formulario" action=""><br>
-                    <button  type="button"  id="btn-agregar"  class="btn btn-primary" >
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
+                    <button  type="button"  id="btn-agregar" onclick= "agregar()"  class="btn btn-primary" >
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                         Añadir Tarea
                     </button><hr>
                 </form>
@@ -23,10 +23,7 @@
                 <ul class="lista" id="lista"></ul>
             </div>
         </div>
-        
+
 <script src="main.js"></script>
 </body>
 </html>
-
-
-
