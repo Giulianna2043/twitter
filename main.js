@@ -1,15 +1,17 @@
-//var listaTareas = [];
+var listaTareas = [];
 var tareaInput=document.getElementById("tareaInput");
-var btnNuevaTarea=document.getElementById("btn-agregar");
 var listaTareas = [{nombre:tareaInput,isDone:false}];
 
+var btnNuevaTarea=document.getElementById("btn-agregar");
+btn-agregar.setAttribute("onclick","onButtonClick()");
 
 //funcion k encarga  de cargar las tareas en lista
 function drawTasksList(){
    var lista=document.getElementById("lista"); 
     
     for(var i in listaTareas) {
-        var html = "<li><input onclick='select'(+i+)type='checkbox' "+(listaTareas[i].isDone?"checked ":"")+">"+listaTareas[i].nombre.value + "<i type='onclick'  class='glyphicon  glyphicon-trash , icon , pull-right '>" +"</li>";
+        var html = "<li><input class=onclick='selectCheck'(+i+)type='checkbox' "+(listaTareas[i].isDone?"checked ":"")+">"+listaTareas[i].nombre.value + "<i type='onclick'  class='glyphicon  glyphicon-trash , icon , pull-right '>" +"</li>";
+        var html = "<li><input class=onclick='selectCheck'(+i+)type='checkbox' "+(listaTareas[i].isDone?"checked ":"")+">"+listaTareas[i].nombre.value + "<i type='onclick'  class='glyphicon  glyphicon-trash , icon , pull-right '>" +"</li>";
         
         lista.innerHTML+=html;
     }     
@@ -17,31 +19,47 @@ function drawTasksList(){
 
 /*---------------------------------------------------------------*/
 // funcion para eliminar la tarea haciendo click al icono:
-/*//  funcion principal que crea los elemnetos en el html:
-function drawTextList(){
-    var input = document.getElementById("mensaje");
-    var valorInput = input.value;
-// nuevo metodo:
-    var listaTareas = [ {nombre: valorInput, isDone:false} ];
+/*/var boton=document.getElementById("boton");
+boton.setAttribute("onclick","onButtonClick()");
+
+var listaTareas = [];
+
+function onButtonClick (){
     var lista = document.getElementById("lista");
+    var texto=document.getElementById("texto");
+    if(texto.value.length!=0){
+    listaTareas.push({nombre:texto.value,isDone:false});
+    texto.focus();
+    texto.value=""
+    drawTasksList();
+    }else{
+        alert("ingresa una tarea");
+    }
+}
+
+function drawTasksList (){
+    var lista = document.getElementById("lista");
+    lista.innerHTML="";
     for(var i in listaTareas){
-        var html = "<li> <input onclick='tachar' type = 'checkbox' " + (listaTareas[i].isDone?"checked":"") +  ">" + 
-        listaTareas[i].nombre + "<span class='glyphicon  glyphicon-trash , icon , pull-right'>" + "</span>" +"</li>";
+        var html = "<li class='tarea'><input class='check' onclick='selectCheck("+i+")' type='checkbox' "+(listaTareas[i].isDone?"checked":"")+">"+"<span "+(listaTareas[i].isDone?"style='text-decoration:line-through'":"style='text-decoration:none'")+" id='new'>"+listaTareas[i].nombre+"</span><i onclick='removeSpan("+i+")' class='glyphicon glyphicon-trash tacho'></i></li>";
+        
         lista.innerHTML += html;
     }
-    var valorInput = document.getElementById("mensaje").value="";
-    eliminarTarea();
 }
-// funcion para eliminar la tarea haciendo click al icono:
-function eliminarTarea(){
-    var eliminar = document.getElementsByClassName("icon");
-    for(var c = 0; c < eliminar.length; c++){
-        eliminar[c].onclick = function(){
-        var lista = this.parentElement;
-        lista.style.display = "none";
-       }
+
+function selectCheck (_index){
+    if(listaTareas[_index].isDone==false){
+        listaTareas[_index].isDone=true;
+    }else{
+        listaTareas[_index].isDone=false;
     }
-};*/
+    drawTasksList();
+}
+
+function removeSpan(_value){
+    listaTareas.splice(_value, 1);
+    drawTasksList();
+}*/
 
 
 
