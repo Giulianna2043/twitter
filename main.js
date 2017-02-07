@@ -26,6 +26,30 @@ function drawTasksList(){
 		tareaInput.value="";
 }
 
+
+//function checkList(box){
+
+	//listaTareas[box].isDone = !listaTareas[box].isDone;
+
+
+	/*if(listaTareas[box].isDone == false){
+		listaTareas[box].isDone = true;
+		//console.log();
+		//lista.getElementsByClassName("works")[box].style.textDecoration="line-through";
+	}else{
+		listaTareas[box].isDone = false;
+		//lista.getElementsByClassName("works")[box].style.textDecoration="none";
+	}
+
+	();
+}*/
+
+function eliminar(tach){
+	listaTareas.splice(tach,1);
+	drawTasksList();
+
+}
+
 /*---------------------------------------------------------------*/
 /*
 var textarea = document.getElementById("texto");
